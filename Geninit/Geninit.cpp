@@ -238,6 +238,14 @@ void Geninit::ErrorCheck()
 		assert(sID < nprocs && "Processor ID out of bounds");
 		lnatoms[sID]++;
 	}
+}
+
+void Geninit::OutputBin()
+{
+
+	 double x,y,z, rr[3], rr1[3], dtype;
+        int sID, ii;
+        int idx, idy, idz;
 
 	// Count the cumulative distribution of atoms across processors
 	lnatoms1[0] = 0;
